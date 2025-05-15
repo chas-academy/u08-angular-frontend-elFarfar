@@ -1,0 +1,26 @@
+<div class="content">
+  <div class="container">
+    <h1>{{ isEdit ? 'Redigera' : 'Skapa' }} Pass</h1>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <label for="workoutType">Tränings typ</label>
+      <input id="workoutType" formControlName="workoutType" placeholder="T.ex cardio" />
+
+      <label for="duration">Tid (min)</label>
+      <input id="duration" type="number" formControlName="duration" placeholder="T.ex 60" />
+
+      <label for="focus">Fokus</label>
+      <input id="focus" formControlName="focus" placeholder="T.ex kondition" />
+
+      <label for="goal">Mål</label>
+      <input id="goal" formControlName="goal" placeholder="Springa 1 mil" />
+
+
+
+      <button type="submit" [disabled]="form.invalid">
+        {{ isEdit ? 'Uppdatera' : 'Skapa' }}
+      </button>
+    </form>
+  </div>
+</div>
+

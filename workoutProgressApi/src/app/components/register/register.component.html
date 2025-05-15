@@ -1,0 +1,23 @@
+<div class="auth-container">
+  <h1>Skapa konto</h1>
+
+  <form (submit)="register()">
+    <input
+      type="email"
+      placeholder="E-post"
+      [(ngModel)]="email"
+      name="email"
+      required
+    />
+    <input
+      type="password"
+      placeholder="Lösenord"
+      [(ngModel)]="password"
+      name="password"
+      required
+    />
+    <button type="submit">Registrera</button>
+  </form>
+
+  <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+</div>

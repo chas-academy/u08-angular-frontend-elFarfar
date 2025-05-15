@@ -1,0 +1,21 @@
+
+  <div class="list-container">
+    <h1>Dina Träningspass</h1>
+
+    <div *ngIf="workouts.length === 0">Inga pass ännu.</div>
+
+    <div class="workout-card" *ngFor="let workout of workouts">
+      <h3>{{ workout.workoutType }}</h3>
+      <p><strong>Tid:</strong> {{ workout.duration }} min</p>
+      <p><strong>Fokus:</strong> {{ workout.focus }}</p>
+      <p><strong>Mål:</strong> {{ workout.goal }}</p>
+      <p><strong>Datum:</strong> {{ workout.date | date : "yyyy-MM-dd" }}</p>
+
+      <button (click)="editWorkout(workout._id)">Redigera</button>
+      <button (click)="deleteWorkout(workout._id)" class="delete-btn">
+        Ta bort
+      </button>
+    </div>
+    <button (click)="goToCreate()" class="back-button">Skapa nytt pass</button>
+  </div>
+
