@@ -25,6 +25,8 @@ För att skapa träningspass måste användaren vara inloggad (JWT-token skickas
 Testfil för workout-form finns i src/app/components/workout-form/workout-form-component.spec.ts
 - För att köra test: 'ng test'
 
+### netlify länk
+- https://trackyoureworkout.netlify.app/
 
 ### Projektet är skapat av
 
